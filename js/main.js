@@ -38,8 +38,8 @@ var SliderStatus = true;
 		activeSlide = $(".image-slide"),
 		activeTitle1 = $(".slider-content h1:nth-child(1)"),
 		activeTitle2 = $(".slider-content h1:nth-child(2)"),
-		activeDescription1 = $(".slider-content p:nth-child(1)"),
-		activeDescription2 = $(".slider-content p:nth-child(2)"),
+		activeDescription1 = $(".slider-content p:nth-child(0)"),
+		activeDescription2 = $(".slider-content p:nth-child(1)"),
 		activeIndex, nextIndex, prevIndex,
 		objHeaderLength = dataHeader.length - 1,
 		SliderTimeout = false;
@@ -104,7 +104,7 @@ var SliderStatus = true;
 
 		activeTitle1.text(dataHeader[activeIndex].title);
 		activeTitle2.text(dataHeader[nextIndex].title);
-		activeDescription1.text(dataHeader[activeIndex].description);
+		//activeDescription1.text(dataHeader[activeIndex].description);
 		activeDescription2.text(dataHeader[nextIndex].description);
 
 		PrevAuthor.text(dataHeader[prevIndex].author);

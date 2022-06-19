@@ -36,8 +36,10 @@ var SliderStatus = true;
 		PrevAuthor = $(".nav-slide a.prev p"),
 		PrevImg = $(".nav-slide a.prev img"),
 		activeSlide = $(".image-slide"),
-		activeTitle = $(".slider-content h1"),
-		activeDescription = $(".slider-content p"),
+		activeTitle1 = $(".slider-content h1:nth-child(1)"),
+		activeTitle2 = $(".slider-content h1:nth-child(2)"),
+		activeDescription1 = $(".slider-content p:nth-child(1)"),
+		activeDescription2 = $(".slider-content p:nth-child(2)"),
 		activeIndex, nextIndex, prevIndex,
 		objHeaderLength = dataHeader.length - 1,
 		SliderTimeout = false;
@@ -100,8 +102,10 @@ var SliderStatus = true;
 		    }
 		});
 
-		activeTitle.text(dataHeader[activeIndex].title);
-		activeDescription.text(dataHeader[activeIndex].description);
+		activeTitle1.text(dataHeader[activeIndex].title);
+		activeTitle2.text(dataHeader[nextIndex].title);
+		activeDescription1.text(dataHeader[activeIndex].description);
+		activeDescription2.text(dataHeader[nextIndex].description);
 
 		PrevAuthor.text(dataHeader[prevIndex].author);
 		PrevTitle.text(dataHeader[prevIndex].title);
